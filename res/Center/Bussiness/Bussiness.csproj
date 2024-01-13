@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C4DE392A-C31B-4EE1-A6AD-4DF99F239417}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Bussiness</RootNamespace>
+    <AssemblyName>Bussiness</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\..\..\迷宫2023.8.5D\迷宫2023.8.5D\Center\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Lsj.Util">
+      <HintPath>..\..\..\迷宫2023.8.5D\迷宫2023.8.5D\Center\Lsj.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActiveBussiness.cs" />
+    <Compile Include="Base64.cs" />
+    <Compile Include="BaseBussiness.cs" />
+    <Compile Include="Bussiness\UserChargeBussiness.cs" />
+    <Compile Include="CenterService\CenterServiceClient.cs" />
+    <Compile Include="CenterService\ICenterService.cs" />
+    <Compile Include="CenterService\ICenterServiceChannel.cs" />
+    <Compile Include="CenterService\ServerData.cs" />
+    <Compile Include="CheckCode.cs" />
+    <Compile Include="ConsortiaBussiness.cs" />
+    <Compile Include="CookieInfoBussiness.cs" />
+    <Compile Include="CountBussiness.cs" />
+    <Compile Include="FeedbackBussiness.cs" />
+    <Compile Include="GameProperties.cs" />
+    <Compile Include="Game\Server\Managers\ConsortiaLevelMgr.cs" />
+    <Compile Include="IniReader.cs" />
+    <Compile Include="Interface\BaseInterface.cs" />
+    <Compile Include="Interface\DWInterface.cs" />
+    <Compile Include="Interface\InterfaceType.cs" />
+    <Compile Include="Interface\QYInterface.cs" />
+    <Compile Include="Interface\SRInterface.cs" />
+    <Compile Include="LanguageMgr.cs" />
+    <Compile Include="ManageBussiness.cs" />
+    <Compile Include="Managers\AchievementMgr.cs" />
+    <Compile Include="Managers\ActiveMgr.cs" />
+    <Compile Include="Managers\CardMgr.cs" />
+    <Compile Include="Managers\DropMgr.cs" />
+    <Compile Include="Managers\GoldMgr.cs" />
+    <Compile Include="Managers\ItemBoxMgr.cs" />
+    <Compile Include="Managers\ItemMgr.cs" />
+    <Compile Include="Managers\QuestMgr.cs" />
+    <Compile Include="Managers\ShopMgr.cs" />
+    <Compile Include="MapBussiness.cs" />
+    <Compile Include="OrderBussiness.cs" />
+    <Compile Include="PetMgr.cs" />
+    <Compile Include="PlayerBussiness.cs" />
+    <Compile Include="ProduceBussiness.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Protocol\eDropType.cs" />
+    <Compile Include="Protocol\eReloadType.cs" />
+    <Compile Include="PveBussiness.cs" />
+    <Compile Include="ServiceBussiness.cs" />
+    <Compile Include="StaticFunction.cs" />
+    <Compile Include="ThreadSafeRandom.cs" />
+    <Compile Include="UserAccountBussiness.cs" />
+    <Compile Include="UserInfoBussiness.cs" />
+    <Compile Include="XmlExtends.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Game.Base\Game.Base.csproj">
+      <Project>{c4de392a-c31b-4ee1-a6ad-4df99f23941b}</Project>
+      <Name>Game.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SqlDataProvider\SqlDataProvider.csproj">
+      <Project>{c4de392a-c31b-4ee1-a6ad-4df99f23941c}</Project>
+      <Name>SqlDataProvider</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

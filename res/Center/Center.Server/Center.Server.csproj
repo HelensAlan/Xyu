@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C4DE392A-C31B-4EE1-A6AD-4DF99F239419}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Center.Server</RootNamespace>
+    <AssemblyName>Center.Server</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\..\..\迷宫2023.8.5D\迷宫2023.8.5D\Center\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CenterServer.cs" />
+    <Compile Include="CenterServerConfig.cs" />
+    <Compile Include="CenterService.cs" />
+    <Compile Include="ChargeRewardMgr.cs" />
+    <Compile Include="ClientBinding.cs" />
+    <Compile Include="Commands\DataTimeCommand.cs" />
+    <Compile Include="Commands\LoginPlayerCommand.cs" />
+    <Compile Include="Commands\ReloadComand.cs" />
+    <Compile Include="Commands\ServerCmdCommand.cs" />
+    <Compile Include="Commands\ShutDownCommand.cs" />
+    <Compile Include="ConsortiaLevelMgr.cs" />
+    <Compile Include="ConsortiaMrg.cs" />
+    <Compile Include="CrossServerConnector.cs" />
+    <Compile Include="eMailRespose.cs" />
+    <Compile Include="eMessageType.cs" />
+    <Compile Include="ePackageType.cs" />
+    <Compile Include="ePlayerState.cs" />
+    <Compile Include="ICenterService.cs" />
+    <Compile Include="LoginMgr.cs" />
+    <Compile Include="Managers\MacroDropMgr.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServerClient.cs" />
+    <Compile Include="ServerData.cs" />
+    <Compile Include="ServerMgr.cs" />
+    <Compile Include="Statics\LogMgr.cs" />
+    <Compile Include="SystemConsortiaMrg.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bussiness\Bussiness.csproj">
+      <Project>{c4de392a-c31b-4ee1-a6ad-4df99f239417}</Project>
+      <Name>Bussiness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Game.Base\Game.Base.csproj">
+      <Project>{c4de392a-c31b-4ee1-a6ad-4df99f23941b}</Project>
+      <Name>Game.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SqlDataProvider\SqlDataProvider.csproj">
+      <Project>{c4de392a-c31b-4ee1-a6ad-4df99f23941c}</Project>
+      <Name>SqlDataProvider</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
