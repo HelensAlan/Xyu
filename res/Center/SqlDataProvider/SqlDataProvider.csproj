@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C4DE392A-C31B-4EE1-A6AD-4DF99F23941C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SqlDataProvider</RootNamespace>
+    <AssemblyName>SqlDataProvider</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Lsj.Util">
+      <HintPath>..\..\..\迷宫2023.8.5D\迷宫2023.8.5D\Center\Lsj.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseClass\ApplicationLog.cs" />
+    <Compile Include="BaseClass\Sql_DbObject.cs" />
+    <Compile Include="DAL\AsyncComandExecuteHanle.cs" />
+    <Compile Include="DAL\SqlHelper.cs" />
+    <Compile Include="DAL\SqlHelperParameterCache.cs" />
+    <Compile Include="Data\AASInfo.cs" />
+    <Compile Include="Data\AchievementConditionInfo.cs" />
+    <Compile Include="Data\AchievementDataInfo.cs" />
+    <Compile Include="Data\AchievementInfo.cs" />
+    <Compile Include="Data\AchievementRewardInfo.cs" />
+    <Compile Include="Data\ActiveAwardInfo.cs" />
+    <Compile Include="Data\ActiveConditionInfo.cs" />
+    <Compile Include="Data\ActiveInfo.cs" />
+    <Compile Include="Data\AuctionInfo.cs" />
+    <Compile Include="Data\BallInfo.cs" />
+    <Compile Include="Data\BestEquipInfo.cs" />
+    <Compile Include="Data\BigBugleInfo.cs" />
+    <Compile Include="Data\BombConfigInfo.cs" />
+    <Compile Include="Data\BoxInfo.cs" />
+    <Compile Include="Data\BufferInfo.cs" />
+    <Compile Include="Data\CardInfo.cs" />
+    <Compile Include="Data\CardUpdateConditionInfo.cs" />
+    <Compile Include="Data\CardUpdateInfo.cs" />
+    <Compile Include="Data\CategoryInfo.cs" />
+    <Compile Include="Data\ChargeRecordInfo.cs" />
+    <Compile Include="Data\ConsortiaAllyInfo.cs" />
+    <Compile Include="Data\ConsortiaApplyAllyInfo.cs" />
+    <Compile Include="Data\ConsortiaApplyUserInfo.cs" />
+    <Compile Include="Data\ConsortiaDutyInfo.cs" />
+    <Compile Include="Data\ConsortiaEquipControlInfo.cs" />
+    <Compile Include="Data\ConsortiaEventInfo.cs" />
+    <Compile Include="Data\ConsortiaInfo.cs" />
+    <Compile Include="Data\ConsortiaInviteUserInfo.cs" />
+    <Compile Include="Data\ConsortiaLevelInfo.cs" />
+    <Compile Include="Data\ConsortiaSkillInfo.cs" />
+    <Compile Include="Data\ConsortiaUserInfo.cs" />
+    <Compile Include="Data\DailyAwardInfo.cs" />
+    <Compile Include="Data\DailyLog.cs" />
+    <Compile Include="Data\DataObject.cs" />
+    <Compile Include="Data\DropCondiction.cs" />
+    <Compile Include="Data\DropInfo.cs" />
+    <Compile Include="Data\DropItem.cs" />
+    <Compile Include="Data\eBageType.cs" />
+    <Compile Include="Data\ExerciseInfo.cs" />
+    <Compile Include="Data\FeedbackAppraisal.cs" />
+    <Compile Include="Data\FeedbackRead.cs" />
+    <Compile Include="Data\FeedbackSubmit.cs" />
+    <Compile Include="Data\FeedbackSubmitContinue.cs" />
+    <Compile Include="Data\FightRateInfo.cs" />
+    <Compile Include="Data\FriendInfo.cs" />
+    <Compile Include="Data\FusionInfo.cs" />
+    <Compile Include="Data\GameNeedPetSkillInfo.cs" />
+    <Compile Include="Data\GoldEquipInfo.cs" />
+    <Compile Include="Data\ItemBoxInfo.cs" />
+    <Compile Include="Data\ItemInfo.cs" />
+    <Compile Include="Data\ItemJoinShopInfo.cs" />
+    <Compile Include="Data\ItemRecordTypeInfo.cs" />
+    <Compile Include="Data\ItemTemplateInfo.cs" />
+    <Compile Include="Data\LevelInfo.cs" />
+    <Compile Include="Data\LogFight.cs" />
+    <Compile Include="Data\LogItem.cs" />
+    <Compile Include="Data\LogMoney.cs" />
+    <Compile Include="Data\LogServer.cs" />
+    <Compile Include="Data\MailInfo.cs" />
+    <Compile Include="Data\MapGoodsInfo.cs" />
+    <Compile Include="Data\MapInfo.cs" />
+    <Compile Include="Data\MarryApplyInfo.cs" />
+    <Compile Include="Data\MarryInfo.cs" />
+    <Compile Include="Data\MarryProp.cs" />
+    <Compile Include="Data\MarryRoomInfo.cs" />
+    <Compile Include="Data\MissionInfo.cs" />
+    <Compile Include="Data\NpcInfo.cs" />
+    <Compile Include="Data\PetConfigInfo.cs" />
+    <Compile Include="Data\PetFightPropertyInfo.cs" />
+    <Compile Include="Data\PetInfo.cs" />
+    <Compile Include="Data\PetLevelInfo.cs" />
+    <Compile Include="Data\PetSkillElementInfo.cs" />
+    <Compile Include="Data\PetSkillInfo.cs" />
+    <Compile Include="Data\PetSkillTemplateInfo.cs" />
+    <Compile Include="Data\PetStarExpInfo.cs" />
+    <Compile Include="Data\PetTemplateInfo.cs" />
+    <Compile Include="Data\PlayerInfo.cs" />
+    <Compile Include="Data\PropInfo.cs" />
+    <Compile Include="Data\PveInfo.cs" />
+    <Compile Include="Data\QQtipsMessageInfo.cs" />
+    <Compile Include="Data\QuestAwardInfo.cs" />
+    <Compile Include="Data\QuestConditionInfo.cs" />
+    <Compile Include="Data\QuestDataInfo.cs" />
+    <Compile Include="Data\QuestInfo.cs" />
+    <Compile Include="Data\RateInfo.cs" />
+    <Compile Include="Data\RebateChargeInfo.cs" />
+    <Compile Include="Data\RebateItemInfo.cs" />
+    <Compile Include="Data\RecordInfo.cs" />
+    <Compile Include="Data\RefineryInfo.cs" />
+    <Compile Include="Data\RouletteGoodsInfo.cs" />
+    <Compile Include="Data\ServerInfo.cs" />
+    <Compile Include="Data\ServerMapInfo.cs" />
+    <Compile Include="Data\ServerProperty.cs" />
+    <Compile Include="Data\ShopGoodsShowInfo.cs" />
+    <Compile Include="Data\ShopInfo.cs" />
+    <Compile Include="Data\ShopItemInfo.cs" />
+    <Compile Include="Data\SpaRoomInfo.cs" />
+    <Compile Include="Data\StrengthenGoodsInfo.cs" />
+    <Compile Include="Data\StrengthenInfo.cs" />
+    <Compile Include="Data\TexpInfo.cs" />
+    <Compile Include="Data\UsersRankInfo.cs" />
+    <Compile Include="Data\UsersRecordInfo.cs" />
+    <Compile Include="Data\VIPInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlDataProvider\Data\UserChargeMoneyInfo.cs" />
+    <Compile Include="Step.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
